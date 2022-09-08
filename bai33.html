@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let namSinh = +prompt('Nhap nam sinh');
+    let can = namSinh % 10;
+    let chi = namSinh % 12;
+    let outputCan;
+    let outputChi;
+
+switch (can) {
+    case 1: outputCan = 'Tan';
+        break;
+    case 0: outputCan = 'Canh';
+        break;
+    case 2: outputCan = 'Nham';
+        break;
+    case 3: outputCan = 'Quy';
+        break;
+    case 4:  outputCan = 'At';
+        break;
+    case 5: outputCan = 'Binh';
+        break;
+    case 6: outputCan = 'Dinh';
+        break;
+    case 7: outputCan = 'Mau';
+        break;
+    case 8: outputCan = 'Ky';
+        break;
+    case 9: outputCan = 'Ky';
+        break;
+};
+switch (chi) {
+    case 0: outputChi = 'Than';
+        break;
+    case 1: outputChi = 'Dau';
+        break;
+    case 2: outputChi = 'Tuat';
+        break;
+    case 3: outputChi = 'Hoi';
+        break;
+    case 4: outputChi = 'Ty';
+        break;
+    case 5: outputChi = 'Suu';
+        break;
+    case 6: outputChi = 'Dan';
+        break;
+    case 7: outputChi = 'Mao';
+        break;
+    case 8: outputChi = 'Thin';
+        break;
+    case 9: outputChi = 'Ty';
+        break;
+    case 10: outputChi = 'Ngo';
+        break;
+    case 11: outputChi = 'Mui';
+        break;
+    default:
+}
+    document.write(`Năm ${namSinh} là tuổi ${outputCan} ${outputChi}`)
+</script>
+</body>
+</html>

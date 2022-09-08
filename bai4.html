@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="image" src="https://gamek.mediacdn.vn/133514250583805952/2022/3/23/kaicd1-1648008713032478606212.jpg"  style="position: absolute"/>
+<img src="https://hosonhanvat.net/wp-content/uploads/2020/07/Luffy-1.jpg" style="position: absolute">
+<script>
+  let element = document.getElementById("image");
+
+
+  function init() {
+    element.style.position = 'relative';
+    element.style.left = '0px';
+    element.style.top = '0px';
+  }
+  init()
+
+  function upArrowPressed() {
+    let element = document.getElementById("image");
+    element.style.top = parseInt(element.style.top) - 5 + 'px';
+  }
+  function downArrowPressed() {
+    let element = document.getElementById("image");
+    element.style.top = parseInt(element.style.top) + 5 + 'px';
+  }
+  function leftArrowPressed() {
+    let element = document.getElementById("image");
+    element.style.left = parseInt(element.style.left) - 5 + 'px';
+  }
+  function rightArrowPressed() {
+    let element = document.getElementById("image");
+    element.style.left = parseInt(element.style.left) + 5 + 'px';
+  }
+  function moveSelection(evt) {
+    console.log('evt ----->',evt)
+    switch (evt.keyCode) {
+      case 37:
+        leftArrowPressed();
+        break;
+      case 39:
+        rightArrowPressed();
+        break;
+      case 38:
+        upArrowPressed();
+        break;
+      case 40:
+        downArrowPressed();
+        break;
+    }
+  }
+
+  document.addEventListener('keydown', moveSelection);
+  console.log(window)
+</script>
+</body>
+</html>
